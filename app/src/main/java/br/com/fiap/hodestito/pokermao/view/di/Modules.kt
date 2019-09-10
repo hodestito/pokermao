@@ -3,6 +3,7 @@ package br.com.fiap.hodestito.pokermao.view.di
 import android.content.Context
 import br.com.fiap.hodestito.pokermao.view.api.AuthInterceptor
 import br.com.fiap.hodestito.pokermao.view.api.PokemonService
+import br.com.fiap.hodestito.pokermao.view.detail.DetailViewModel
 import br.com.fiap.hodestito.pokermao.view.form.FormPokemonViewModel
 import br.com.fiap.hodestito.pokermao.view.list.ListPokemonsViewModel
 import br.com.fiap.hodestito.pokermao.view.repository.PokemonRepository
@@ -43,6 +44,7 @@ class Modules {
         viewModel { SplashViewModel(get()) }
         viewModel { ListPokemonsViewModel(get()) }
         viewModel { FormPokemonViewModel(get()) }
+        viewModel { DetailViewModel(get()) }
     }
     val repositoryModule = module {
         single<PokemonRepository> { PokemonRepositoryImpl(get()) }
